@@ -1,0 +1,11 @@
+development: &development
+  host: localhost
+  adapter: postgresql
+  database: alquiler_development
+  encoding: utf8
+  pool: 5
+  username: postgres
+
+test:
+  database: alquiler_test
+  <<: *development

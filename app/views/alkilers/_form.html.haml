@@ -1,0 +1,56 @@
+#foRm_content
+  .form_block
+    = f.label :client_name, "Nombre del Cliente"
+    = f.text_field :client_name
+
+  .form_block
+    = f.label :client_document, "Cedula"
+    = f.text_field :client_document
+
+  .form_block
+    = f.label :client_address, "Direccion"
+    = f.text_field :client_address
+
+  .form_block
+    = f.label :chairs, "Cantidad de sillas"
+    = f.text_field :chairs
+    = label_tag "Disponibles : #{get_max_value("sillas")}"
+
+  .form_block
+    = f.label :tables, "Cantidad de mesas"
+    = f.text_field :tables
+    = label_tag "Disponibles : #{get_max_value("mesitas")}"
+
+  .form_block
+    = f.label :table_cloths, "Manteles Sencillos"
+    = f.text_field :table_cloths
+    = label_tag "Disponibles : #{get_max_value("mantel sencillo")}"
+
+  .form_block
+    = f.label :table_cloths_special, "Manteles con Faldillin"
+    = f.text_field :table_cloths_special
+    = label_tag "Disponibles : #{get_max_value("mantel con faldillin")}"
+
+  .form_block
+    = f.label :big_tables, "Mesones"
+    = f.text_field :big_tables
+    = label_tag "Disponibles : #{get_max_value("mantel con faldillin")}"
+
+  .form_block
+    = f.label :date_init, "Fecha de Pedido"
+    = f.text_field :date_init, :class => "datepicker"
+
+  .form_block
+    = f.label :date_finish, "Fecha de Entrega"
+    = f.text_field :date_finish, :class => "datepicker"
+
+  .form_block
+    = f.label :abono, "Abono"
+    = f.text_field :abono
+
+  .form_block
+    = f.label :total, "Total del Alquiler"
+    = f.text_field :total
+
+  .form_block
+    = f.submit "Guardar"

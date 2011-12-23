@@ -1,0 +1,14 @@
+ALQUILERES
+
+= link_to("Nuevo alquiler", new_alkiler_path)
+
+- unless @alkilers.blank?
+  - @alkilers.each do |alkiler|
+    = alkiler.client_name
+    %br
+    = alkiler.client_document
+    %br
+    = link_to("Editar", edit_alkiler_path(alkiler))
+-else
+  #empty_message
+    NO HAY ALQUILERES

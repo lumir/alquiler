@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alquiler</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+   <div id="flash_container">
+      <% flash.each do |key, msg| %>
+         <% if msg && !msg.empty? %>
+         <div id="<%= key%>">
+            <%= msg unless msg.is_a?(Array)%>
+            <% if msg.is_a? Array%>
+            <ul>
+               <% msg.map do |m|%>
+                  <li>
+                     <%= m %>
+                  </li>
+               <%end%>
+            </ul>
+            <% end%>
+         </div>
+         <% end%>
+      <% end %>
+   </div>
+
+<%= yield %>
+<%= yield :javascript%>
+</body>
+</html>

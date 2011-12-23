@@ -1,0 +1,11 @@
+EDITAR ALQUILER
+
+- form_for @alkiler, :method => :put, :html => {:id => "add_alkiler"} do |f|
+  = render :partial => "form", :locals => { :f => f, :alkiler => @alkiler }
+
+- content_for :javascript do
+  :javascript
+
+    $('.datepicker').datepicker();
+
+
