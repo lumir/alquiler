@@ -14,27 +14,27 @@
   .form_block
     = f.label :chairs, "Cantidad de sillas"
     = f.text_field :chairs
-    = label_tag "Disponibles : #{get_max_value("sillas")}"
+    = label_tag "Disponibles : #{get_max_value("chairs")}"
 
   .form_block
     = f.label :tables, "Cantidad de mesas"
     = f.text_field :tables
-    = label_tag "Disponibles : #{get_max_value("mesitas")}"
+    = label_tag "Disponibles : #{get_max_value("tables")}"
 
   .form_block
-    = f.label :table_cloths, "Manteles Sencillos"
-    = f.text_field :table_cloths
-    = label_tag "Disponibles : #{get_max_value("mantel sencillo")}"
+    = f.label :cloth_tables, "Manteles Sencillos"
+    = f.text_field :cloth_tables
+    = label_tag "Disponibles : #{get_max_value("cloth_tables")}"
 
   .form_block
-    = f.label :table_cloths_special, "Manteles con Faldillin"
-    = f.text_field :table_cloths_special
-    = label_tag "Disponibles : #{get_max_value("mantel con faldillin")}"
+    = f.label :special_cloth_tables, "Manteles con Faldillin"
+    = f.text_field :special_cloth_tables
+    = label_tag "Disponibles : #{get_max_value("special_cloth_tables")}"
 
   .form_block
     = f.label :big_tables, "Mesones"
     = f.text_field :big_tables
-    = label_tag "Disponibles : #{get_max_value("mantel con faldillin")}"
+    = label_tag "Disponibles : #{get_max_value("big_tables")}"
 
   .form_block
     = f.label :date_init, "Fecha de Pedido"
