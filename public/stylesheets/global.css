@@ -1,0 +1,98 @@
+.main_button {
+  float: right;
+  margin: 0 10px -15px;
+  text-decoration:none;
+  padding-top: 20px;
+  text-align: center;
+  vertical-align: middle;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: block;
+  width: 135px;
+  height: 34px;
+  background-color: #ababab}
+.main_button:hover { background-color: #cacaca }
+
+#success, .success{
+  background-color:#E8FFCE;
+  border:1px solid #339966;
+  color:#339900;
+  float:left;
+  font-size:11px;
+  font-weight:bold;
+  margin-left:150px;
+  margin-top:15px;
+  padding:6px;
+  text-align:center;
+  width:408px;
+  position:fixed;
+  z-index:1000;
+  left:0;
+  margin:auto;
+  right:0;
+  top:45px;
+}
+
+#error, .error, .failure{
+  background-color:#FFA3A3;
+  border:1px solid #FF0000;
+  color:#990000;
+  float:left;
+  font-size:11px;
+  font-weight:bold;
+  margin-left:150px;
+  margin-top:15px;
+  padding:6px;
+  text-align:center;
+  width:408px;
+  position:fixed;
+  z-index:1000;
+  left:0;
+  margin:auto;
+  right:0;
+  top:45px;
+}
+#error ul, .error ul, .failure ul, #success ul, .success ul{
+    margin-left:45%;
+    text-align:left;
+}
+
+.form_block{
+  margin-bottom:10px;
+}
+
+.textfield{
+  margin-left:50px;
+  float:right;
+}
+
+.max_label{
+  float:right;
+}
+
+
+#silver {
+font-family: Sans-Serif;
+font-size: 12px;
+margin: 1px;
+width: 480px;
+text-align: left;
+border-collapse: collapse;
+}
+#silver th {
+font-size: 14px;
+font-weight: normal;
+text-align: left;
+padding: 8px;
+background-color: #676767;
+border-top: 2px solid #d3ddff;
+border-bottom: 1px solid #fff;
+color: #FFFFFF;
+}
+#silver td {
+padding: 8px;
+border-bottom: 1px solid #000000;
+color: #000000;
+border-top: 1px solid #000000;
+background: #e8edff;
+}

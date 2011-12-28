@@ -10,8 +10,8 @@ class CreateAlkilers < ActiveRecord::Migration
       t.integer  :cloth_tables
       t.integer  :special_cloth_tables
       t.integer  :big_tables
-      t.date  :date_init
-      t.date  :date_finish
+      t.string  :date_init
+      t.string  :date_finish
       t.integer  :abono
       t.integer  :total
       t.timestamps

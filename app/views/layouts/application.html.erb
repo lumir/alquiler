@@ -26,7 +26,24 @@
       <% end %>
    </div>
 
-<%= yield %>
+   <div id="wrap">
+
+      <div id="header">
+         <h1><a href="#">Alquileres Donde Luis</a></h1>
+         <h2 class="sub-header">Sillas, Mesas, Mesones, Manteles</h2>
+         <h2>
+           <%= link_to("Nuevo alquiler", new_alkiler_path, :class => "main_button") %>
+         </h2>
+      </div>
+      <div id="banner"></div>
+      <%= yield %>
+      <div style="clear:both;">
+      </div>
+      <div id="footer">
+        Diseñado por mi
+      </div>
+
+   </div>
 <%= yield :javascript%>
 </body>
 </html>

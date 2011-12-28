@@ -1,56 +1,60 @@
-#foRm_content
+#form_content
   .form_block
     = f.label :client_name, "Nombre del Cliente"
-    = f.text_field :client_name
+    = f.text_field :client_name, :class => "textfield"
 
   .form_block
     = f.label :client_document, "Cedula"
-    = f.text_field :client_document
+    = f.text_field :client_document, :class => "textfield"
 
   .form_block
     = f.label :client_address, "Direccion"
-    = f.text_field :client_address
+    = f.text_field :client_address, :class => "textfield"
 
   .form_block
     = f.label :chairs, "Cantidad de sillas"
-    = f.text_field :chairs
-    = label_tag "Disponibles : #{get_max_value("chairs")}"
-
+    = f.text_field :chairs, :class => "item textfield", :element => "chairs"
+    = label_tag "max_chairs", "Disponibles : #{get_max_value("chairs")}",:class => "max_label"
+    = hidden_field_tag "max_chairs", get_max_value("chairs")
   .form_block
     = f.label :tables, "Cantidad de mesas"
-    = f.text_field :tables
-    = label_tag "Disponibles : #{get_max_value("tables")}"
+    = f.text_field :tables, :class => "item textfield", :element => "tables"
+    = label_tag "max_tables", "Disponibles : #{get_max_value("tables")}",:class => "max_label"
+    = hidden_field_tag "max_tables", get_max_value("tables")
 
   .form_block
     = f.label :cloth_tables, "Manteles Sencillos"
-    = f.text_field :cloth_tables
-    = label_tag "Disponibles : #{get_max_value("cloth_tables")}"
+    = f.text_field :cloth_tables, :class => "item textfield", :element => "cloth_tables"
+    = label_tag "max_cloth_tables", "Disponibles : #{get_max_value("cloth_tables")}",:class => "max_label"
+    = hidden_field_tag "max_cloth_tables", get_max_value("cloth_tables")
 
   .form_block
     = f.label :special_cloth_tables, "Manteles con Faldillin"
-    = f.text_field :special_cloth_tables
-    = label_tag "Disponibles : #{get_max_value("special_cloth_tables")}"
+    = f.text_field :special_cloth_tables, :class => "item textfield", :element => "special_cloth_tables"
+    = label_tag "max_special_coth_tables", "Disponibles : #{get_max_value("special_cloth_tables")}",:class => "max_label"
+    = hidden_field_tag "max_special_cloth_tables", get_max_value("special_cloth_tables")
 
   .form_block
     = f.label :big_tables, "Mesones"
-    = f.text_field :big_tables
-    = label_tag "Disponibles : #{get_max_value("big_tables")}"
+    = f.text_field :big_tables, :class => "item textfield", :element => "bog_tables"
+    = label_tag "max_big_tables", "Disponibles : #{get_max_value("big_tables")}",:class => "max_label"
+    = hidden_field_tag "max_big_tables", get_max_value("big_tables")
 
   .form_block
     = f.label :date_init, "Fecha de Pedido"
-    = f.text_field :date_init, :class => "datepicker"
+    = f.text_field :date_init, :class => "datepicker textfield"
 
   .form_block
     = f.label :date_finish, "Fecha de Entrega"
-    = f.text_field :date_finish, :class => "datepicker"
+    = f.text_field :date_finish, :class => "datepicker textfield"
 
   .form_block
     = f.label :abono, "Abono"
-    = f.text_field :abono
+    = f.text_field :abono, :class => "textfield"
 
   .form_block
     = f.label :total, "Total del Alquiler"
-    = f.text_field :total
+    = f.text_field :total, :class => "textfield"
 
   .form_block
     = f.submit "Guardar"

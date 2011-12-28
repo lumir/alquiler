@@ -1,14 +1,49 @@
-ALQUILERES
 
-= link_to("Nuevo alquiler", new_alkiler_path)
 
-- unless @alkilers.blank?
-  - @alkilers.each do |alkiler|
-    = alkiler.client_name
-    %br
-    = alkiler.client_document
-    %br
-    = link_to("Editar", edit_alkiler_path(alkiler))
--else
-  #empty_message
-    NO HAY ALQUILERES
+.left
+  %h2
+    LISTADO DE ALQUILERES
+
+  - unless @alkilers.blank?
+    %table{:id => "silver"}
+      %thead
+        %tr
+          %th
+            Nombre
+          %th
+            Fecha
+          %th
+            Sillas
+          %th
+            Mesas
+          %th
+            Mesones
+          %th
+            Manteles 1
+          %th
+            Manteles 2
+          %th
+            Opciones
+      %tbody
+        - @alkilers.each do |alkiler|
+          %tr
+            %td
+              = alkiler.client_name
+            %td
+              = Date.strptime(alkiler.date_finish, "%m/%d/%Y").strftime("%d %b")
+            %td
+              = alkiler.chairs
+            %td
+              = alkiler.tables
+            %td
+              = alkiler.big_tables
+            %td
+              = alkiler.cloth_tables
+            %td
+              = alkiler.special_cloth_tables
+            %td
+              = link_to("Editar", edit_alkiler_path(alkiler))
+  -else
+    #empty_message
+      NO HAY ALQUILERES
+.right
