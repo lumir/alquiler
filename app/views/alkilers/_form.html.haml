@@ -12,31 +12,35 @@
     = f.text_field :client_address, :class => "textfield"
 
   .form_block
+    = f.label :client_phone, "Direccion"
+    = f.text_field :client_phone, :class => "textfield"
+
+  .form_block
     = f.label :chairs, "Cantidad de sillas"
-    = f.text_field :chairs, :class => "item textfield", :element => "chairs"
+    = f.text_field :chairs, :class => "item textfield", :element => "chairs", :price => "#{@chairs_price}", :onchange => "javascript:calculate_total_value();"
     = label_tag "max_chairs", "Disponibles : #{get_max_value("chairs")}",:class => "max_label"
     = hidden_field_tag "max_chairs", get_max_value("chairs")
   .form_block
     = f.label :tables, "Cantidad de mesas"
-    = f.text_field :tables, :class => "item textfield", :element => "tables"
+    = f.text_field :tables, :class => "item textfield", :element => "tables", :price => "#{@tables_price}", :onchange => "javascript:calculate_total_value();"
     = label_tag "max_tables", "Disponibles : #{get_max_value("tables")}",:class => "max_label"
     = hidden_field_tag "max_tables", get_max_value("tables")
 
   .form_block
     = f.label :cloth_tables, "Manteles Sencillos"
-    = f.text_field :cloth_tables, :class => "item textfield", :element => "cloth_tables"
+    = f.text_field :cloth_tables, :class => "item textfield", :element => "cloth_tables", :price => "#{@cloth_tables_price}", :onchange => "javascript:calculate_total_value();"
     = label_tag "max_cloth_tables", "Disponibles : #{get_max_value("cloth_tables")}",:class => "max_label"
     = hidden_field_tag "max_cloth_tables", get_max_value("cloth_tables")
 
   .form_block
     = f.label :special_cloth_tables, "Manteles con Faldillin"
-    = f.text_field :special_cloth_tables, :class => "item textfield", :element => "special_cloth_tables"
+    = f.text_field :special_cloth_tables, :class => "item textfield", :element => "special_cloth_tables", :price => "#{@special_cloth_tables_price}", :onchange => "javascript:calculate_total_value();"
     = label_tag "max_special_coth_tables", "Disponibles : #{get_max_value("special_cloth_tables")}",:class => "max_label"
     = hidden_field_tag "max_special_cloth_tables", get_max_value("special_cloth_tables")
 
   .form_block
     = f.label :big_tables, "Mesones"
-    = f.text_field :big_tables, :class => "item textfield", :element => "bog_tables"
+    = f.text_field :big_tables, :class => "item textfield", :element => "big_tables", :price => "#{@big_tables_price}", :onchange => "javascript:calculate_total_value();"
     = label_tag "max_big_tables", "Disponibles : #{get_max_value("big_tables")}",:class => "max_label"
     = hidden_field_tag "max_big_tables", get_max_value("big_tables")
 
@@ -54,7 +58,7 @@
 
   .form_block
     = f.label :total, "Total del Alquiler"
-    = f.text_field :total, :class => "textfield"
+    = f.text_field :total, :class => "textfield", :readonly => true
 
   .form_block
     = f.submit "Guardar"

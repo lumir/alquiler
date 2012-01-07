@@ -14,7 +14,7 @@ function validate_values(element){
   }
 }
 
-function submit_form(){
+function submit_alkiler_form(){
   var sw = true
   $(".item").each(function(a,b){
     var element = b.id.split("alkiler_")[1];
@@ -27,8 +27,9 @@ function submit_form(){
 
   if(sw){
     show_modal_dashboard_message("todo Bien", "success");
+    $("#add_alkiler").submit();
   }else{
-    show_modal_dashboard_message("todo Mal", "error");
+    show_modal_dashboard_message("Errores en los datos", "error");
   }
 
 }
@@ -44,4 +45,19 @@ function show_modal_dashboard_message(message, class_name)
     else
         $('#'+class_name).fadeIn(1000)
 
+}
+
+function calculate_total_value(){
+  var total_value = 0;
+  $(".item").each(function(a,b){
+    if(b.value != ""){
+      var price = $("#alkiler_"+b.id.split("alkiler_")[1]).attr("price");
+      var units = b.value;
+      total_value += (parseInt(price) * parseInt(units));
+      console.log("precio: "+price);
+      console.log("unidades"+units);
+      console.log(total_value);
+    }
+  });
+  $("#alkiler_total").val(total_value);
 }

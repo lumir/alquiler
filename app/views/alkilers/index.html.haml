@@ -30,7 +30,7 @@
             %td
               = alkiler.client_name
             %td
-              = Date.strptime(alkiler.date_finish, "%m/%d/%Y").strftime("%d %b")
+              = Date.strptime(alkiler.date_finish, "%m/%d/%Y").strftime("%d %b") if alkiler.date_finish
             %td
               = alkiler.chairs
             %td

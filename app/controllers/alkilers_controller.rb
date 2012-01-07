@@ -1,5 +1,5 @@
 class AlkilersController < ApplicationController
-
+  before_filter :load_item_prices, :only => [:new, :edit]
   def index
     @alkilers = Alkiler.all
   end
@@ -31,12 +31,20 @@ class AlkilersController < ApplicationController
       flash[:notice] = "Alquiler grabado"
       redirect_to alkilers_path
     else
-      flash[:error] = "Error en los datos"
+      flash[:error] = "#{@alkiler.errors.full_messages.to_sentence}"
       render "new"
     end
   end
 
   private
+
+  def load_item_prices
+    @chairs_price = Item.find_by_name("chairs").price
+    @tables_price = Item.find_by_name("tables").price
+    @big_tables_price = Item.find_by_name("big_tables").price
+    @cloth_tables_price = Item.find_by_name("cloth_tables").price
+    @special_cloth_tables_price = Item.find_by_name("special_cloth_tables").price
+  end
 
   def refresh_max_values(params, alkiler = nil)
     chairs = Item.find_by_name("chairs")
