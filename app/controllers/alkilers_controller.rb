@@ -1,5 +1,6 @@
 class AlkilersController < ApplicationController
   before_filter :load_item_prices, :only => [:new, :edit]
+  before_filter :authenticate_user!
   def index
     @alkilers = Alkiler.all
   end

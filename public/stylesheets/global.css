@@ -96,3 +96,10 @@ color: #000000;
 border-top: 1px solid #000000;
 background: #e8edff;
 }
+
+.sign_in{
+  margin-bottom: 20px;
+  margin-left: 300px;
+  margin-top: 20px;
+  width: 230px;
+}

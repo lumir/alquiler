@@ -4,3 +4,7 @@ items.each do |item|
   Item.create(item)
   p "item #{item[:name]} was added successfully"
 end
+
+admin = User.find_or_initialize_by_email("admin@alkiler.com")
+admin.update_attributes(:username => "luis", :password => "3472938", :password_confirmation => "3472938")
+p "admin loaded succesfully"
