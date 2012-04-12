@@ -6,9 +6,9 @@ class AlkilersController < ApplicationController
   end
 
   def new
+    p "&"*100
     @contacts = request.env['omnicontacts.contacts']
     p "*"*100
-    p request.env
     p request.inspect
     p "List of contacts obtained from #{params[:importer]}:"
     @contacts.each do |contact|
