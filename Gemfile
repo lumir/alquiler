@@ -7,6 +7,7 @@ gem 'jquery-rails', '0.2.7'
 gem 'devise', '1.3.4'
 gem 'haml', '3.0.25'
 gem 'will_paginate', '2.3.15'
+gem "omnicontacts"
 
 group :test do
   gem 'rcov'
