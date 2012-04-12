@@ -8,10 +8,10 @@ class AlkilersController < ApplicationController
   def new
     @contacts = request.env['omnicontacts.contacts']
     p "*"*100
-    Rails.logger("List of contacts obtained from #{params[:importer]}:")
+    p "List of contacts obtained from #{params[:importer]}:"
     @contacts.each do |contact|
       p "&"*100
-      Rails.logger("Contact found: name => #{contact[:name]}, email => #{contact[:email]}")
+      p "Contact found: name => #{contact[:name]}, email => #{contact[:email]}"
     end
 
     @alkiler = Alkiler.new()
