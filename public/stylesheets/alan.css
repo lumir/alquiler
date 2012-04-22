@@ -656,3 +656,7 @@ form{ margin: 0px; padding: 0px;}
   color:#59DE59;
   text-decoration: none;
 }
+
+.hidden{
+  display:none;
+}

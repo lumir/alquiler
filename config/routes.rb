@@ -8,4 +8,5 @@ Alquiler::Application.routes.draw do
   match "/contacts/:importer/callback" => "alkilers#new"
 
   match "/home" => "pages#home"
+  match "/encuesta" => "pages#encuesta"
 end
