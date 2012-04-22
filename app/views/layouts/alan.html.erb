@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alcoholicos Anonimos</title>
+  <%= stylesheet_link_tag "alan.css", "screen.css" %>
+  <%= javascript_include_tag "jquery.min","jquery.easing", "jquery-ui.min","jquery.flipCounter", "rails", "application", "jquery.alerts", "easySlider.js" %>
+  <%= csrf_meta_tag %>
+
+  <script type="text/javascript">
+
+     function slideSwitch() {
+         var $active = $('#slideshow IMG.active');
+
+         if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+         var $next =  $active.next().length ? $active.next()
+             : $('#slideshow IMG:first');
+
+         $active.addClass('last-active');
+
+         $next.css({opacity: 0.0})
+             .addClass('active')
+             .animate({opacity: 1.0}, 1000, function() {
+                 $active.removeClass('active last-active');
+             });
+     }
+
+    jQuery(document).ready(function($) {
+            $("#counter").flipCounter();
+
+            $(function() {
+                setInterval( "slideSwitch()", 5000 );
+            });
+    });
+  </script>
+
+</head>
+<body>
+   <div id="flash_container">
+      <% flash.each do |key, msg| %>
+         <% if msg && !msg.empty? %>
+         <div id="<%= key%>">
+            <%= msg unless msg.is_a?(Array)%>
+            <% if msg.is_a? Array%>
+            <ul>
+               <% msg.map do |m|%>
+                  <li>
+                     <%= m %>
+                  </li>
+               <%end%>
+            </ul>
+            <% end%>
+         </div>
+         <% end%>
+      <% end %>
+   </div>
+   <div id="wrapper">
+   <!-- header -->
+     <div class="header">
+       <div class="headertop"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft logo"><a href="index.html" title="Home"><img src="images/logo.jpg" alt="Home" border="0" /></a></div>
+       <div class="floatleft head2"><img src="images/head2.jpg" alt="" border="0" /></div>
+     </div>
+     <div class="header"><img src="images/headerbig.jpg" alt="" border="0" /></div>
+
+     <div class="topmenu">
+       <div class="floatleft white"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft black"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft grey"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft deepblue"><img src="images/spacer.gif" alt="" border="0" /></div>
+
+       <div class="floatleft menucontainergreen">
+          <div class="floatleft menucontainerdeepblue">
+           <div class="floatleft lightblue"><img src="images/spacer.gif" alt="" border="0" /></div>
+           <div class="floatleft menucontainerlightblue">
+               <div class="menubg">
+                   <ul>
+                     <!-- <li><a href="index.html" class="home">&nbsp;</a></li> -->
+                     <li><%= link_to "INICIO", "#", :class => "menu_link"%>
+                     <li><%= link_to "QUIENES SOMOS", "#", :class => "menu_link nobg"%>
+                   </ul>
+               </div>
+               <div class="floatleft phonenumber"><img src="images/phonenumber.jpg" alt="" border="0" /></div>
+           </div>
+           <div class="floatleft lightblue"><img src="images/spacer.gif" alt="" border="0" /></div>
+         </div>
+       </div>
+       <div class="floatleft deepblue"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft grey"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft black"><img src="images/spacer.gif" alt="" border="0" /></div>
+       <div class="floatleft white"><img src="images/spacer.gif" alt="" border="0" /></div>
+     </div>
+
+   <!-- /header -->
+
+   <!-- middlecontent -->
+    <div class="middlecontentwhite">
+      <div class="middlecontentblack">
+         <div class="middlecontentgrey">
+           <div class="middlecontent">
+
+             <div class="middlecontenttopbg"><img src="images/spacer.gif" alt="" border="0" /></div>
+             <div class="spacerdiv"><img src="images/spacer.gif" alt="" border="0" /></div>
+             <div class="left"><img src="images/spacer.gif" alt="" border="0" /></div>
+             <div class="leftbox">
+               <div class="floatleft"><img src="images/homeleftboxtop.jpg" alt="" border="0" /></div>
+               <div class="homeleftboxbg">
+                 <div class="box1"><img src="images/box1.jpg" alt="" border="0" /></div>
+
+                 <div class="box1_con_blue">
+                 "When it comes to service we are this company if formost in the industry."<br /><br />
+                 <div class="alignright">-customer</div>
+                 </div>
+
+                 <div class="box1_con">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis. Lorem ipsum dolor sit amet,
+                 consectetur adipiscing elit. Vivamus eget lorem ac mi porta consectetur. Aliquam blandit posuere magna.
+                 Mauris in mauris. Duis in tellus sed justo tempor hendrerit. Aenean eu nisl.
+                 </div>
+
+               </div>
+               <div class="floatleft"><img src="images/homeleftboxbottom1.jpg" alt="" border="0" /></div>
+
+               <div class="box1_con_lightblue">
+               <div id="counter"><input type="hidden" name="counter-value" value="100" /></div>
+               Content 1 : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><br />
+               Sed sed risus eget erat cursus tristique. Ut ipsum velit, porttitor ac, lacinia et, pretium
+               </div>
+
+             </div>
+
+             <div class="middlebox">
+                 <div class="contenttop">
+                  <%= yield%>
+                     <div class="divider"><img src="images/homesep.jpg" alt="" border="0" width="1" height="373" /></div>
+
+                     <div class="spacerdiv2"><img src="images/spacer.gif" alt="" border="0" /></div>
+
+                 </div>
+
+                 <div class="contentbottom">
+                   <div class="alarmsystem"><img src="images/alarmsystem.jpg" alt="" border="0" /></div>
+
+                   <div class="security"><img src="images/security.jpg" alt="" border="0" /></div>
+               </div>
+             </div>
+             <div class="footerspacer"><img src="images/spacer.gif" alt="" border="0" /></div>
+           </div>
+         </div>
+      </div>
+    </div>
+   <!-- /middlecontent -->
+
+   <!-- footer  maintain license info in footer   -->
+    <div class="footerwhite">
+      <div class="footerblack">
+         <div class="footergrey">
+           <div class="footerlightgrey">
+               <div class="innerfootercontent" style="text-align:right;">
+           <div style="margin-top:62px; margin-right:10px;" id="footer_copyright">
+           Do Not Remove >
+          <!-- Do not remove modify or any way change this piece of code - GNU Licensing, Model Release Etc covered by this link -->
+         <a href="http://www.securityguardjobsnow.com" style="color:#666; text-decoration:none;">Security Guard Jobs</a> | <a href="http://www.mikeylong.com/webdev.html" style="color:#666; text-decoration:none;"><img src="http://www.mikeylong.com/testing/debug/copy.jpg" ALT="Seattle Web Design" border="0"></a><!-- Do not remove this piece of code - GNU Licensing, Model Release Etc covered by this link -->
+          </div>
+         </div>
+             </div>
+           </div>
+         </div>
+      </div>
+    </div>
+   <div class="footerbottom"><img src="images/spacer.gif" alt="" border="0" /></div>
+
+<%= yield :javascript%>
+</body>
+</html>
