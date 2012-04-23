@@ -217,6 +217,7 @@ form{ margin: 0px; padding: 0px;}
 .middlecontent div.middlebox {
   float:left;
   width: 585px;
+  padding-left: 20px;
 }
 
 .contenttop, .contentbottom {
@@ -303,6 +304,8 @@ form{ margin: 0px; padding: 0px;}
 }
 
 .homeleftboxbg {
+  padding-left: 10px;
+  padding-top: 10px;
   float:left;
   background: url(../images/homeleftboxbg.jpg) repeat-x;
   background-color: #131A20;
@@ -659,4 +662,24 @@ form{ margin: 0px; padding: 0px;}
 
 .hidden{
   display:none;
+}
+
+.title{
+  color:#ffffff;
+  font-size:11px;
+}
+
+.general_background(){
+  background-color:#0B2F53;
+}
+
+.region_link{
+  display:block;
+  text-decoration:none;
+  color:#ffffff;
+}
+
+.region_link:hover{
+  color:#59DE59;
+  text-decoration: none;
 }

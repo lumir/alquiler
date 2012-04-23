@@ -77,8 +77,9 @@
                <div class="menubg">
                    <ul>
                      <!-- <li><a href="index.html" class="home">&nbsp;</a></li> -->
-                     <li><%= link_to "INICIO", "#", :class => "menu_link"%>
-                     <li><%= link_to "QUIENES SOMOS", "#", :class => "menu_link nobg"%>
+                     <li><%= link_to "INICIO", "/home", :class => "menu_link"%><li>
+                     <li><%= link_to "QUIENES SOMOS", "/somos", :class => "menu_link nobg"%><li>
+                     <li><%= link_to "CONTACTENOS", contact_path, :class => "menu_link"%><li>
                    </ul>
                </div>
                <div class="floatleft phonenumber"><img src="images/phonenumber.jpg" alt="" border="0" /></div>
@@ -104,23 +105,25 @@
              <div class="spacerdiv"><img src="images/spacer.gif" alt="" border="0" /></div>
              <div class="left"><img src="images/spacer.gif" alt="" border="0" /></div>
              <div class="leftbox">
-               <div class="floatleft"><img src="images/homeleftboxtop.jpg" alt="" border="0" /></div>
                <div class="homeleftboxbg">
-                 <div class="box1"><img src="images/box1.jpg" alt="" border="0" /></div>
-
-                 <div class="box1_con_blue">
-                 "When it comes to service we are this company if formost in the industry."<br /><br />
-                 <div class="alignright">-customer</div>
-                 </div>
-
-                 <div class="box1_con">
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis. Lorem ipsum dolor sit amet,
-                 consectetur adipiscing elit. Vivamus eget lorem ac mi porta consectetur. Aliquam blandit posuere magna.
-                 Mauris in mauris. Duis in tellus sed justo tempor hendrerit. Aenean eu nisl.
-                 </div>
-
+                  <div class="title">
+                     Grupos presentes en las bodas de AA en Colombia.
+                     </br>
+                     </br>
+                     <%= link_to "Region A", "#", :class => "region_link"%>
+                     </br>
+                     <%= link_to "Region B", "#", :class => "region_link"%>
+                     </br>
+                     <%= link_to "Region C", "#", :class => "region_link"%>
+                     </br>
+                     <%= link_to "Region D", "#", :class => "region_link"%>
+                     </br>
+                     <%= link_to "Region E", "#", :class => "region_link"%>
+                     </br>
+                     <%= link_to "Region Exterior ", "#", :class => "region_link"%>
+                     </br>
+                  </div>
                </div>
-               <div class="floatleft"><img src="images/homeleftboxbottom1.jpg" alt="" border="0" /></div>
 
                <div class="box1_con_lightblue">
                <div id="counter"><input type="hidden" name="counter-value" value="100" /></div>
