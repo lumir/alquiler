@@ -1,7 +1,9 @@
+%p.question_title
+  Escribenos tus inquietudes, sugerencias y comentarios aqui:
 .contact_form
   =form_tag send_contact_path do
     = label_tag "Mensaje"
     %br
-    = text_area_tag :message
+    = text_area_tag :message,"", :class =>"message_area"
     %br
     = submit_tag "Enviar"

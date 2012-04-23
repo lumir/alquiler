@@ -12,4 +12,5 @@ Alquiler::Application.routes.draw do
   match "/contactenos" => "pages#contactenos", :as => :contact
   match "/enviando" => "pages#contactenos", :as => :send_contact
   match "/somos" => "pages#somos"
+  match "/region" => "pages#region"
 end

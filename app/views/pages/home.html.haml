@@ -1,9 +1,13 @@
-#slideshow
-  = image_tag("logo.jpg", :class => "active", :alt =>"")
-  = image_tag("phonenumber.jpg", :alt =>"")
-  = image_tag("security.jpg", :alt =>"")
-
-
-%div
+.parraf
   ¿Es Alcoholicos Anonimos para ti?
-  = link_to "ENCUESTA", "/encuesta", :class => "menu_link"
+  %br
+  responde las siguientes 12 preguntas
+  = link_to "aqui", "/encuesta", :class => "question_title"
+
+%br
+%br
+#slideshow
+  = image_tag("alan1.jpg", :class => "active", :alt =>"")
+  = image_tag("alan2.jpg", :alt =>"")
+  = image_tag("alan3.jpg", :alt =>"")
+

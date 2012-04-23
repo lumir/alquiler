@@ -10,7 +10,9 @@ class PagesController < ApplicationController
   end
 
   def somos
+  end
 
+  def region
   end
 
   def contactenos

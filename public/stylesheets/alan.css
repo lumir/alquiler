@@ -630,11 +630,11 @@ form{ margin: 0px; padding: 0px;}
   display:inline;
 }
 .innerfootercontent {
+  padding-top: 25px;
   float:left;
   width: 874px;
   height: 82px;
-  background: url(../images/footerbg.jpg) repeat-x;
-  background-color:#1D2835;
+  background-color:#0B2F53;
   margin-left: 2px;
   margin-right: 2px;
   margin-right: 2px;
@@ -682,4 +682,28 @@ form{ margin: 0px; padding: 0px;}
 .region_link:hover{
   color:#59DE59;
   text-decoration: none;
+}
+
+.question_title{
+  color: #0B2F53;
+  font-weight: bold;
+  text-decoration:none;
+}
+
+.message_area{
+  height: 200px;
+  margin: 10px 10px 10px 0;
+  padding: 5px;
+  width: 500px;
+}
+
+.custom_footer{
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}
+
+.parraf{
+  font-size: 14px;
+  margin-top: 10px;
 }
