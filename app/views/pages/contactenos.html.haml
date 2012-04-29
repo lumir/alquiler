@@ -2,6 +2,15 @@
   Escribenos tus inquietudes, sugerencias y comentarios aqui:
 .contact_form
   =form_tag send_contact_path do
+    = label_tag "Nombre"
+    %br
+    = text_field_tag :nombre
+    %br
+    = label_tag "Email"
+    %br
+    = email_field_tag :email
+    %br
+    %br
     = label_tag "Mensaje"
     %br
     = text_area_tag :message,"", :class =>"message_area"

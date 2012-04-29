@@ -707,3 +707,14 @@ form{ margin: 0px; padding: 0px;}
   font-size: 14px;
   margin-top: 10px;
 }
+
+.footer_title{
+  font-family: serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer_info{
+  font-family: arial;
+  font-size: 11px;
+}
