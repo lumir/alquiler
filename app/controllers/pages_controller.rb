@@ -12,6 +12,9 @@ class PagesController < ApplicationController
   def somos
   end
 
+  def descargas
+  end
+
   def region
   end
 

@@ -69,7 +69,7 @@ form{ margin: 0px; padding: 0px;}
   display:inline;
   margin:0px;
   padding:0px;
-  width:708px;
+  width:900px;
 }
 .menubg li {
   margin:0px;
@@ -632,10 +632,9 @@ form{ margin: 0px; padding: 0px;}
 .innerfootercontent {
   padding-top: 25px;
   float:left;
-  width: 874px;
+  width: 880px;
   height: 82px;
   background-color:#0B2F53;
-  margin-left: 2px;
   margin-right: 2px;
   margin-right: 2px;
   display:inline;

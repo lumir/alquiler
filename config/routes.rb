@@ -9,6 +9,7 @@ Alquiler::Application.routes.draw do
 
   match "/home" => "pages#home", :as => :home
   match "/encuesta" => "pages#encuesta"
+  match "/descargas" => "pages#descargas"
   match "/contactenos" => "pages#contactenos", :as => :contact
   match "/enviando" => "pages#contactenos", :as => :send_contact
   match "/somos" => "pages#somos"
