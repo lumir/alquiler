@@ -783,12 +783,11 @@ form{ margin: 0px; padding: 0px;}
 }
 
 .nivo-directionNav{
-  float: left;
-  display: inline;
+  float: left;  
   margin-top: 250px;
 }
 
 .nivo-preNav, .nivo-nextNav{
   float:left;
-  margin-left:10px;
+  
 }
