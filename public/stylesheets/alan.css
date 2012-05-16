@@ -44,7 +44,7 @@ form{ margin: 0px; padding: 0px;}
 
 .menucontainergreen {
   float:left;
-  width: 874px;
+  width: 881px;
   height: 63px;
   background-color:#0D2B49;
 }
@@ -56,7 +56,7 @@ form{ margin: 0px; padding: 0px;}
 }
 .menucontainerlightblue {
   float:left;
-  width: 872px;
+  width: 881px;
   height: 49px;
   background:url(../images/linkbg.jpg) repeat-x;
   background-color:#253452;
@@ -82,7 +82,7 @@ form{ margin: 0px; padding: 0px;}
   padding-right:1px;
   padding-top:0px;
   height: 48px;
-  background:url(../images/toplinksep.jpg) right no-repeat;
+  width:170px;
 }
 .menubg li.nobg { background:none; }
 
@@ -716,4 +716,79 @@ form{ margin: 0px; padding: 0px;}
 .footer_info{
   font-family: arial;
   font-size: 11px;
+}
+#success, .success{
+  background-color:#E8FFCE;
+  border:1px solid #339966;
+  color:#339900;
+  float:left;
+  font-size:11px;
+  font-weight:bold;
+  margin-left:150px;
+  margin-top:15px;
+  padding:6px;
+  text-align:center;
+  width:408px;
+  position:fixed;
+  z-index:1000;
+  left:0;
+  margin:auto;
+  right:0;
+  top:45px;
+}
+
+#error, .error, .failure{
+  background-color:#FFA3A3;
+  border:1px solid #FF0000;
+  color:#990000;
+  float:left;
+  font-size:11px;
+  font-weight:bold;
+  margin-left:150px;
+  margin-top:15px;
+  padding:6px;
+  text-align:center;
+  width:408px;
+  position:fixed;
+  z-index:1000;
+  left:0;
+  margin:auto;
+  right:0;
+  top:45px;
+}
+#error ul, .error ul, .failure ul, #success ul, .success ul{
+    margin-left:45%;
+    text-align:left;
+}
+
+.nivoSlider {
+    position:relative;
+    width:618px; /* Change this to your images width */
+    height:246px; /* Change this to your images height */
+    background:url(images/loading.gif) no-repeat 50% 50%;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.nivo-slice, .nivo-box{
+  display:none;
+}
+
+.nivo-directionNav{
+  float: left;
+  display: inline;
+  margin-top: 250px;
+}
+
+.nivo-preNav, .nivo-nextNav{
+  float:left;
+  margin-left:10px;
 }

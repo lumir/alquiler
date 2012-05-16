@@ -11,7 +11,8 @@ Alquiler::Application.routes.draw do
   match "/encuesta" => "pages#encuesta"
   match "/descargas" => "pages#descargas"
   match "/contactenos" => "pages#contactenos", :as => :contact
-  match "/enviando" => "pages#contactenos", :as => :send_contact
+  match "/send_contact" => "pages#send_contact", :as => :send_contact
   match "/somos" => "pages#somos"
   match "/region" => "pages#region"
+  match "/eventos" => "pages#eventos"
 end

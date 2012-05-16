@@ -1,7 +1,7 @@
 %p.question_title
   Escribenos tus inquietudes, sugerencias y comentarios aqui:
 .contact_form
-  =form_tag send_contact_path do
+  =form_tag send_contact_path, :method => :post do
     = label_tag "Nombre"
     %br
     = text_field_tag :nombre
@@ -16,3 +16,10 @@
     = text_area_tag :message,"", :class =>"message_area"
     %br
     = submit_tag "Enviar"
+
+%br
+%br
+.map_container
+  Nuestra Ubicacion
+  %br
+  = image_tag("staticmap.png")

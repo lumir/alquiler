@@ -3,7 +3,7 @@
    <head>
       <title>
          Alcoholicos Anonimos
-      </title><%= stylesheet_link_tag "alan.css", "screen.css" %><%= javascript_include_tag "jquery.min","jquery.easing", "jquery-ui.min","jquery.flipCounter", "rails", "application", "jquery.alerts", "easySlider.js" %><%= csrf_meta_tag %>
+      </title><%= stylesheet_link_tag "alan.css", "screen.css" %><%= javascript_include_tag "jquery.min","jquery.easing", "jquery-ui.min","jquery.flipCounter", "rails", "application", "jquery.alerts", "easySlider.js","jquery.nivo.slider.js","jquery.nivo.slider.pack.js" %><%= csrf_meta_tag %>
       <script type="text/javascript">
 
       function slideSwitch() {
@@ -24,12 +24,27 @@
       }
 
       jQuery(document).ready(function($) {
+         $('#slider').nivoSlider({
+            boxCols: 8, // For box animations
+            controlNav: false,
+            boxRows: 4, // For box animations
+            animSpeed: 300, // Slide transition speed
+            pauseTime: 5000, // How long each slide will show            
+            prevText: 'Anterior', // Prev directionNav text
+            nextText: 'Siguiente',
+            directionNavHide: false
+         });
+         if($('#error_dashboard').length == 0)
+            $('#'+class_name).fadeIn(1000).delay(8000).fadeOut(400);
+         else
+            $('#'+class_name).fadeIn(1000)
+
             counter = 0;
             $("#counter").flipCounter();
 
-            $(function() {
-                setInterval( "slideSwitch()", 5000 );
-            });
+            // $(function() {
+            //     setInterval( "slideSwitch()", 5000 );
+            // });
       });
       </script>
    </head>
@@ -47,33 +62,16 @@
          </div><% end%><% end %>
       </div>
       <div id="wrapper">
-         <!-- header -->
+         
          <div class="header">
-            <div class="headertop">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
+            
          </div>
          <div class="header">
             <img src="images/header_image.jpg" alt="" border="0">
          </div>
-         <div class="topmenu">
-            <div class="floatleft white">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-            <div class="floatleft black">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-            <div class="floatleft grey">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-            <div class="floatleft deepblue">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
+         <div class="topmenu">         
             <div class="floatleft menucontainergreen">
-               <div class="floatleft menucontainerdeepblue">
-                  <div class="floatleft lightblue">
-                     <img src="images/spacer.gif" alt="" border="0">
-                  </div>
+               <div class="floatleft menucontainerdeepblue">                  
                   <div class="floatleft menucontainerlightblue">
                      <div class="menubg">
                         <ul>
@@ -90,42 +88,21 @@
                            <li>
                               <%= link_to "DESCARGAS", "/descargas", :class => "menu_link"%>
                            </li>
-
+                           <li>
+                              <%= link_to "EVENTOS", "/eventos", :class => "menu_link"%>
+                           </li>
                         </ul>
                      </div>
                   </div>
-                  <div class="floatleft lightblue">
-                     <img src="images/spacer.gif" alt="" border="0">
-                  </div>
+                  
                </div>
-            </div>
-            <div class="floatleft deepblue">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-            <div class="floatleft grey">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-            <div class="floatleft black">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-            <div class="floatleft white">
-               <img src="images/spacer.gif" alt="" border="0">
-            </div>
-         </div><!-- /header -->
-         <!-- middlecontent -->
+            </div>            
+         </div>
+         
          <div class="middlecontentwhite">
             <div class="middlecontentblack">
                <div class="middlecontentgrey">
                   <div class="middlecontent">
-                     <div class="middlecontenttopbg">
-                        <img src="images/spacer.gif" alt="" border="0">
-                     </div>
-                     <div class="spacerdiv">
-                        <img src="images/spacer.gif" alt="" border="0">
-                     </div>
-                     <div class="left">
-                        <img src="images/spacer.gif" alt="" border="0">
-                     </div>
                      <div class="leftbox">
                         <div class="homeleftboxbg">
                            <div class="title">
@@ -150,36 +127,28 @@
                            </br>
                            Counter Visitors
                            <div id="counter">
-                              <input type="hidden" name="counter-value" value="100">
+                              <input type="hidden" name="counter-value" value="<%= Visitor.count.to_s%>">
                            </div>
                         </div>
                      </div>
                      <div class="middlebox">
                         <div class="contenttop">
-                           <%= yield%>
-                           <div class="divider">
-                              <img src="images/homesep.jpg" alt="" border="0" width="1" height="373">
-                           </div>
-                           <div class="spacerdiv2">
-                              <img src="images/spacer.gif" alt="" border="0">
-                           </div>
+                           <%= yield%>                        
                         </div>
                         <div class="contentbottom">
                         </div>
                      </div>
-                     <div class="footerspacer">
-                        <img src="images/spacer.gif" alt="" border="0">
-                     </div>
+                     
                   </div>
                </div>
             </div>
-         </div><!-- /middlecontent -->
-         <!-- footer  maintain license info in footer   -->
+         </div>
+         
          <div class="footerlightgrey custom_footer">
             <div class="innerfootercontent">
-               <span class="footer_title">Corporación Nacional de Servicios Generales de Alcohólicos Anónimos</span>
+               <span class="footer_title">Comité de Àrea 3 Región A Territorio Norte Sección Colombia</span>
             </br>
-               <span class="footer_info">Carrera 54 No. 52-36. Oficina 17  Edificio Sociedad de Mejoras Públicas Tel: 3440313 – 3704972</span>
+               <span class="footer_info">Carrera 54 No. 52-36. Oficina 17  Edificio Sociedad de Mejoras Públicas Tel: 3440317 – 3704972</span>
             </br>
                 <span class="footer_info">Barranquilla – Colombia</span>
             </br>
@@ -187,8 +156,6 @@
             </div>
          </div>
       </div>
-      <div class="footerbottom">
-         <img src="images/spacer.gif" alt="" border="0">
-      </div><%= yield :javascript%>
+      <%= yield :javascript%>      
    </body>
 </html>
