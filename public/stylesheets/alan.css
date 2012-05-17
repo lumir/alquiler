@@ -371,7 +371,7 @@ form{ margin: 0px; padding: 0px;}
   padding-bottom:15px;
   text-align:left;
   line-height: 190%;
-  color: #213241;
+  color: #ffffff;
   font-family: Verdana, Tahoma, Arial;
   font-size: 10px;
   text-decoration: none;
@@ -790,4 +790,7 @@ form{ margin: 0px; padding: 0px;}
 .nivo-preNav, .nivo-nextNav{
   float:left;
   
+}
+.box1_con_lightblue img{
+  height:135px;
 }
