@@ -1,12 +1,9 @@
-.parraf
-  ¿Es Alcoholicos Anonimos para ti?
-  %br
-  responde las siguientes 12 preguntas
-  = link_to "aqui", "/encuesta", :class => "question_title"
+%a{:href => "/encuesta", :style => "position:absolute;margin-left:350px;z-index:2;"}
+	=image_tag("primera.jpg", :style => "width:150px;float:right;margin-right:72px;margin-top:26px;")    
 
 %br
 #slider.nivo-slider
-  = image_tag("alan1.jpg", :class => "active", :alt =>"")
-  = image_tag("alan2.jpg", :alt =>"")
-  = image_tag("alan3.jpg", :alt =>"")
+	= image_tag("alan1.jpg", :class => "active", :alt =>"")
+	= image_tag("alan2.jpg", :alt =>"")
+	= image_tag("alan3.jpg", :alt =>"")
 

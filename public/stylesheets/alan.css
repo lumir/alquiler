@@ -26,7 +26,8 @@ form{ margin: 0px; padding: 0px;}
 .topmenu{
   float:left;
   width:882px;
-  height:63px;
+  height:50px;
+  margin-top: -4px;
 }
 .topmenu div.white { width: 1px; height: 68px; background-color: #FEFEFF; }
 .topmenu div.black { width: 1px; height: 68px; background-color: #222932; }
@@ -690,7 +691,7 @@ form{ margin: 0px; padding: 0px;}
 }
 
 .message_area{
-  height: 200px;
+  height: 170px;
   margin: 10px 10px 10px 0;
   padding: 5px;
   width: 500px;
@@ -761,11 +762,12 @@ form{ margin: 0px; padding: 0px;}
     text-align:left;
 }
 
-.nivoSlider {
+.nivoSlider {    
     position:relative;
     width:618px; /* Change this to your images width */
     height:246px; /* Change this to your images height */
     background:url(images/loading.gif) no-repeat 50% 50%;
+    z-index:1;
 }
 .nivoSlider img {
     position:absolute;
@@ -793,4 +795,45 @@ form{ margin: 0px; padding: 0px;}
 }
 .box1_con_lightblue img{
   height:135px;
+}
+
+.downloads{
+  margin-top: 10px;
+}
+
+.aalogo{
+  float: right;
+  margin: 10px;
+}
+
+.diapo_logo{
+  width: 300px;
+}
+
+.map_container{
+  margin-left: 200px;
+}
+
+.map_container img{
+  width:187px;
+  margin-top: 10px;
+}
+
+.event_container{
+  margin-top:10px;  
+}
+
+.event_container .title{
+  color: red;
+  font-family: Comic Sans MS;
+  font-size: 35px;
+}
+
+.event_container .slogan{
+  color:#F66E00;
+  font-size: 18px;
+}
+
+.event_container .info{
+  font-size: 14px;
 }

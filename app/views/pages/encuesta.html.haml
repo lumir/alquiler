@@ -123,6 +123,10 @@
   #result.hidden
     %p.question_title RESULTADO:
     %br
+
+  %div.hidden
+    =image_tag("ultima.jpg", :style => "width:280px;margin-left:1500px;margin-top:26px;")
+
 :javascript
   function increment_answer(element){
     counter += 1
@@ -146,7 +150,7 @@
     }else{
       message = "Felicitaciones, al parecer no tiene problemas con el manejo del alcohol."
     }
-
+    $("#result").next().show();
     $("#question_12").fadeOut();
     $("#result").append(message);
     $("#result").show();
