@@ -3,13 +3,21 @@ Alquiler::Application.configure do
 ActionMailer::Base.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {
-  :address => 'smtp.gmail.com',
-  :port => 587,
-  :domain => 'alkiller.heroku.com',
-  :authentication => :plain,
-  :user_name => 'lumir.olivares@koombea.com',
-  :password => 'holanda1'
+  :address        => 'smtp.gmail.com',
+  :domain         => 'alkiller.heroku.com',
+  :authentication => :login,
+  :user_name      => 'lumir.olivares@koombea.com',
+  :password       => 'holanda1',
 }
+
+# ActionMailer::Base.smtp_settings = {
+#   :address => 'smtp.gmail.com',
+#   :port => 587,
+#   :domain => 'alkiller.heroku.com',
+#   :authentication => :plain,
+#   :user_name => 'lumir.olivares@koombea.com',
+#   :password => 'holanda1'
+# }
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
