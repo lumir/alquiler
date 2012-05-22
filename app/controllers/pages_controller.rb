@@ -31,6 +31,7 @@ class PagesController < ApplicationController
   end
 
   def send_contact
+    p params.inspect
     # ContactMailer.contact_email("regionaarea3@gmail.com",params[:message])
     # ContactMailer.contact_email("aabarranquilla@yahoo.es",params[:message])
     ContactMailer.contact_email("lumir.olivares@koombea.com",params[:message]).deliver
