@@ -213,7 +213,8 @@ form{ margin: 0px; padding: 0px;}
 .middlecontent div.left { float:left; width: 19px;}
 .middlecontent div.leftbox {
   float:left;
-  width: 270px;
+  width: 220px;
+  margin-right:16px;
 }
 .middlecontent div.middlebox {
   float:left;
@@ -310,9 +311,10 @@ form{ margin: 0px; padding: 0px;}
   float:left;
   background: url(../images/homeleftboxbg.jpg) repeat-x;
   background-color: #131A20;
-  width: 269px;
+  width: 220px;
   min-height: 301px;
   border-right: 1px solid #535F6E;
+  height:600px;
 }
 .box1 {
   float:left;
