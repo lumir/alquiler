@@ -35,7 +35,17 @@ Alquiler::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.gmail.com',
+    :domain         => 'alkiller.heroku.com',
+    :authentication => :login,
+    :user_name      => 'lumir.olivares@koombea.com',
+    :password       => 'holanda1',
+  }
+ 
 
   # Enable threaded mode
   # config.threadsafe!
