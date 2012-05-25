@@ -5,11 +5,11 @@
 		%source{:src => "/images/song.mp3", :type => "audio/mp3"}
 		%source{:src => "/images/song.wav", :type => "audio/wav"}
 
-	=link_to("Descargar aqui", "/images/song.mp3", :style => "vertical-align:middle")
+	=link_to("Descargar aqui", "/download_file?audio=true", :style => "vertical-align:middle")
 %br
 
 %p.parraf{:style => "color:#0B2F53; font-weight:bold;"}
 	Diapositivas 
 %br	
-%a{:href=> "/img/diapo_1.pptx"}
+%a{:href=> "/download_file?diapositiva=true"}
 	=image_tag("diapo_logo.png", :class => "diapo_logo")

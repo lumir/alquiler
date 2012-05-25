@@ -18,6 +18,11 @@ class PagesController < ApplicationController
 
   end
 
+  def download_file    
+    send_file "#{Rails.root}/public/img/diapo_1.pptx" if params[:diapositiva]        
+    send_file "#{Rails.root}/public/images/song.mp3" if params[:audio]        
+  end
+
   def region
 
   end

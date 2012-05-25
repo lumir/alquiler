@@ -15,4 +15,5 @@ Alquiler::Application.routes.draw do
   match "/somos" => "pages#somos"
   match "/region" => "pages#region"
   match "/eventos" => "pages#eventos"
+  match "/download_file" => "pages#download_file"
 end
